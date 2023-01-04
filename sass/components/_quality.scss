@@ -1,0 +1,26 @@
+@use '../utils/variables' as *;
+@use '../utils/globals' as *;
+
+.column {
+  padding: 94px 0;
+  &__list {
+    @include mixin-display(flex, space-between, center, wrap);
+  }
+  &__item {
+    @include mixin-main($color-grey, 400, 14px, 1.71, 0.03em);
+    width: 270px;
+  }
+  &__label {
+    @include mixin-display(flex, center, center, wrap);
+    padding: 25px 0;
+    border: 1px solid $background-beige;
+    border-radius: 4px;
+    background-color: $background-beige;
+  }
+  &__name {
+    @include mixin-main($color-black, 700, 14px, 1.14, 0.03em);
+    padding-top: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+}

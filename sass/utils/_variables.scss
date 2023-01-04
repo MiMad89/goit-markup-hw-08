@@ -1,0 +1,39 @@
+$color-white: white;
+$color-black: black;
+$color-blue: #2196f3;
+$color-grey: #757575;
+$color-red: red;
+$color-line: #ececec;
+$color-por: #eeeeee;
+$background-black: black;
+$background-blue: #2196f3;
+$background-graphite: #2f303a;
+$background-icon: #afb1b8;
+$background-beige: #f5f4fa;
+$background-one: rgba(255, 255, 255, 0.1);
+$background-tree: rgba(255, 255, 255, 0.3);
+$background-eight: rgba(47, 48, 58, 0.8);
+$background-two: rgba(33, 33, 33, 0.2);
+$background-shadow-blue: rgba(33, 150, 243, 0.9);
+$background-shadow-five: rgba(0, 0, 0, 0.15);
+$background-shadow-one: rgba(0, 0, 0, 0.1);
+$background-shadow-two: rgba(0, 0, 0, 0.2);
+$background-shadow-four: rgba(47, 48, 58, 0.4);
+$background-shadow-six: rgba(0, 0, 0, 0.06);
+$background-shadow-eight: rgba(0, 0, 0, 0.08);
+$background-shadow-twelve: rgba(0, 0, 0, 0.12);
+$background-shadow-fourteen: rgba(0, 0, 0, 0.14);
+$background-shadow-fiveteen: rgba(0, 0, 0, 0.15);
+$background-shadow-sixteen: rgba(0, 0, 0, 0.16);
+
+
+%main-body{
+    font-family: 'Roboto';
+}
+
+%main-container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
+

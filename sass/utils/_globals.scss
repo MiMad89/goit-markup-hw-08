@@ -1,0 +1,39 @@
+@use '../utils/variables' as *;
+
+body {
+  @extend %main-body;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  @extend %main-container;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+@mixin mixin-main($color, $font-weight, $font-size, $line-height, $letter-spacing) {
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+
+@mixin mixin-display($display, $justify-content, $align-items, $flex-wrap){
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+}
+

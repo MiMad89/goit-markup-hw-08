@@ -1,0 +1,26 @@
+@use '../utils/variables' as *;
+@use '../utils/globals' as *;
+
+.header {
+  border-bottom: 1px solid $color-line;
+}
+
+.menu {
+  @include mixin-display(flex, space-between, center, wrap);
+  &__header {
+    @include mixin-display(flex, flex-start, center, wrap);
+  }
+  &__logo {
+    padding: 25px 0;
+  }
+  &__link {
+    @include mixin-main($color-blue, 700, 26px, 1.19, 0.03em);
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+  }
+  &__element {
+    color: $color-black;
+  }
+}

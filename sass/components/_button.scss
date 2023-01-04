@@ -1,0 +1,40 @@
+@use '../utils/variables' as *;
+@use '../utils/globals' as *;
+
+.bg {
+  padding: 200px 0;
+  background-color: $background-graphite;
+  background-image: linear-gradient($background-shadow-four, $background-shadow-four),
+    url(../images/background/background.jpg);
+  background-size: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__content {
+    @include mixin-main($color-white, 900, 44px, 1.36, 0.06em);
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    @include mixin-main($color-white, 700, 16px, 1.875, 0.06em);
+    padding: 10px 42px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px $background-shadow-fiveteen;
+    border-radius: 4px;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background: $background-blue;
+    border: $color-blue;
+  }
+  &__text:hover {
+    background-color: $color-white;
+    color: $color-blue;
+  }
+}

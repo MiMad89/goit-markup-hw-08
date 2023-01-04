@@ -1,0 +1,32 @@
+@use '../utils/variables' as *;
+@use '../utils/globals' as *;
+
+.job {
+  &__list {
+   @include mixin-display(flex, space-between, center, wrap);
+    padding-bottom: 94px;
+  }
+  &__title {
+  @include mixin-main($color-black, 700, 36px, 1.166, 0.03em);
+  padding-bottom: 50px;
+  text-align: center;
+}
+  &__item {
+    position: relative;
+  }
+  &__item > &__image {
+    display: block;
+  }
+  &__description {
+    width: 100%;
+    background-color: $background-eight;
+    position: absolute;
+    bottom: 0;
+  }
+  &__text {
+    @include mixin-main($color-white, 700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 27px 0;
+  }
+}

@@ -1,0 +1,39 @@
+@use '../utils/variables' as *;
+@use '../utils/globals' as *;
+
+.contact {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &__link {
+    @include mixin-main($color-grey, 500, 14px, 1.14, 0.02em);
+    text-decoration: none;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+  &__tel {
+    margin-left: 30px;
+  }
+  &__mail-icon {
+    vertical-align: -1px;
+    fill: currentColor;
+
+    &:hover {
+      fill: $background-blue;
+    }
+  }
+  &__tel-icon {
+    vertical-align: -3px;
+    fill: currentColor;
+
+    &:hover {
+      fill: $background-blue;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@use '../utils/variables' as *;
+@use '../utils/globals' as *;
+
+.buttons {
+  &__list {
+    @include mixin-display(flex, center, center, wrap);
+    margin: 94px 0 50px;
+    gap: 8px;
+  }
+  &__text {
+    @include mixin-main($color-black, 500, 16px, 1.63, 0.03em);
+    padding: 6px 22px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    //   &:nth-last-child(-n + 4) {
+    //     margin-left: 8px;
+    //   }
+    &:hover,
+    &:focus {
+      background-color: $background-blue;
+      color: $color-white;
+      box-shadow: 0px 3px 1px $background-shadow-one, 0px 1px 2px $background-shadow-eight,
+        0px 2px 2px $background-shadow-twelve;
+      border-radius: 4px;
+    }
+  }
+}

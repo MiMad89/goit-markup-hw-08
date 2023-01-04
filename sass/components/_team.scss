@@ -1,0 +1,53 @@
+@use '../utils/variables' as *;
+@use '../utils/globals' as *;
+
+.team {
+  background-color: $background-beige;
+  padding: 94px 0;
+  &__title{
+    @include mixin-main($color-black, 700, 36px, 1.166, 0.03em);
+  padding-bottom: 50px;
+  text-align: center;
+  }
+  &__list {
+    @include mixin-display(flex, space-between, center, wrap);
+  }
+  &__mane {
+    @include mixin-main($color-black, 500, 16px, 1.19, 0.03em);
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  &__text {
+    @include mixin-main($color-grey, 400, 16px, 1.19, 0.03em);
+    text-align: center;
+    padding-bottom: 16px;
+  }
+  &__item {
+    text-align: center;
+    background: $color-white;
+    box-shadow: 0px 1px 3px $background-shadow-twelve, 0px 1px 1px $background-shadow-fourteen,
+      0px 2px 1px $background-shadow-two;
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__details {
+    @include mixin-display(flex, center, center, wrap);
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  &__social {
+    display: flex;
+    gap: 10px;
+  }
+  &__icon {
+    fill: $background-icon;
+    border-radius: 50%;
+    transition-property: fill, background-color, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      fill: $color-white;
+      background-color: $background-blue;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use '../utils/variables' as *;
+@use '../utils/globals' as *;
+
+.portfolio {
+  padding-bottom: 94px;
+
+  &__list {
+    @include mixin-display(flex, center, stretch, wrap);
+    gap: 30px;
+    background: $color-white;
+    text-align: left;
+  }
+  &__name {
+    @include mixin-main($color-black, 700, 18px, 2, 0.045em);
+  }
+  &__text {
+    @include mixin-main($color-grey, 400, 16px, 1.87, 0.03em);
+  }
+  &__image {
+    display: block;
+  }
+  &__title {
+    @include mixin-display(flex, center, stretch, wrap);
+    flex-direction: column;
+    padding: 20px 24px;
+    border: 1px solid $color-por;
+  }
+  &__item {
+    cursor: pointer;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__item:hover,
+    &__item:focus {
+      box-shadow: 0px 1px 1px $background-shadow-twelve, 0px 4px 4px $background-shadow-six,
+        1px 4px 6px $background-shadow-sixteen;
+    }
+  }
+  &__item:hover &__lable {
+    transform: translatex(0);
+  }
+  &__overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  &__lable {
+    @include mixin-main($color-black, 400, 18px, 1.55, 0.02em);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 45px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background-shadow-blue;
+    transform: translatey(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__content {
+    color: $color-white;
+    padding: 10px;
+    margin: 0;
+    font-size: 18px;
+  }
+}

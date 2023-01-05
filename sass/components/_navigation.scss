@@ -2,10 +2,10 @@
 @use '../utils/globals' as *;
 
 .nav {
-  padding-left: 46px;
+  gap: 46px;
 
   &__list {
-    @include mixin-display(flex, flex-start, stretch, wrap);
+    @include mixin-display(flex, flex-start, stretch, nowrap);
   }
   &__item {
     margin-left: 46px;

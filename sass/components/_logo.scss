@@ -6,9 +6,9 @@
 }
 
 .menu {
-  @include mixin-display(flex, space-between, center, wrap);
+  @include mixin-display(flex, space-between, center, nowrap);
   &__header {
-    @include mixin-display(flex, flex-start, center, wrap);
+    @include mixin-display(flex, flex-start, center, nowrap);
   }
   &__logo {
     padding: 25px 0;

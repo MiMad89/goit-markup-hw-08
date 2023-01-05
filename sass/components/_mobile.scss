@@ -1,0 +1,107 @@
+@use '../utils/variables' as *;
+@use '../utils/globals' as *;
+
+@media screen and (max-width: 767px) {
+  .contact,
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile__icon {
+    display: none;
+  }
+}
+
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: $color-white;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  &__toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  &.is-open {
+    transform: translateX(0);
+  }
+  &__icon {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      fill: $color-blue;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: $color-black;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: $color-black;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $color-blue;
+    }
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}

@@ -1,19 +1,12 @@
 @use '../utils/variables' as *;
 @use '../utils/globals' as *;
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contact {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
 .contact {
   cursor: pointer;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  // gap: 30px;
+  gap: 30px;
 
   &__link {
     @include mixin-main($color-grey, 500, 14px, 1.14, 0.02em);
@@ -27,7 +20,7 @@
     }
   }
   &__tel {
-    margin-left: 30px;
+    // margin-left: 30px;
   }
   &__mail-icon {
     vertical-align: -1px;
@@ -44,5 +37,17 @@
     &:hover {
       fill: $background-blue;
     }
+  }
+}
+
+// TABLET
+@media screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
+  .contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .contact__link {
+    font-size: 12px;
   }
 }

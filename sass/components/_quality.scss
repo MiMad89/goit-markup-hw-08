@@ -5,22 +5,42 @@
   padding: 94px 0;
   &__list {
     @include mixin-display(flex, space-between, center, wrap);
+    gap: 30px;
   }
   &__item {
     @include mixin-main($color-grey, 400, 14px, 1.71, 0.03em);
-    width: 270px;
+    // width: 270px;
   }
   &__label {
     @include mixin-display(flex, center, center, wrap);
     padding: 25px 0;
+    margin-bottom: 30px;
     border: 1px solid $background-beige;
     border-radius: 4px;
     background-color: $background-beige;
   }
   &__name {
     @include mixin-main($color-black, 700, 14px, 1.14, 0.03em);
-    padding-top: 30px;
+    text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
+  }
+}
+
+// TABLET
+@media screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
+  .column__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+// DESKOP
+@media screen and (min-width: $deskopStart) {
+  .column__item{
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .column__name{
+    @include mixin-main($color-black, 700, 14px, 1.14, 0.03em);
+    text-align: left;
   }
 }

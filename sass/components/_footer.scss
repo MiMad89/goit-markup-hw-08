@@ -11,18 +11,33 @@
 
   &__bg {
     display: flex;
+    flex-direction: column;
+    // align-items: center;
+    text-align: center;
   }
   &__logo {
     @include mixin-main($color-blue, 700, 26px, 1.19, 0.03em);
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
+    margin-bottom: 20px;
   }
   &__list {
-    margin: 20px 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    margin-bottom: 60px;
   }
-  &__item:nth-last-child(-n + 2) {
-    margin-top: 9px;
+  &__item {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // gap: 8px;
   }
+  // &__item:nth-last-child(-n + 2) {
+  //   margin-top: 9px;
+  // }
   &__link {
     text-decoration: none;
     color: $color-grey;
@@ -42,16 +57,18 @@
   //   text-decoration-line: underline;
   // }
   &__social {
-    margin-top: 10px;
-    margin-left: 70px;
+    margin-bottom: 60px;
+    // margin-top: 10px;
+    // margin-left: 70px;
   }
   &__title {
     @include mixin-main($color-white, 700, 14px, 1.14, 0.03em);
-  margin-bottom: 20px;
-  text-transform: uppercase;
+    margin-bottom: 20px;
+    text-transform: uppercase;
   }
   &__social-item {
     display: flex;
+    justify-content: center;
     gap: 10px;
   }
   &__social-icon {
@@ -68,20 +85,24 @@
   }
 }
 .newsletter {
-  margin-top: 10px;
-  margin-left: auto;
+  // margin-top: 10px;
+  // margin-left: auto;
   &__title {
     @include mixin-main($color-white, 700, 14px, 1.14, 0.03em);
-  margin-bottom: 20px;
-  text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
   }
   &__item {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    margin: 0;
+    gap: 20px;
   }
   &__mail {
     width: 350px;
-    margin-right: 12px;
+    // margin-right: 12px;
     padding: 15px;
     font-weight: 400;
     border: 1px solid $background-tree;
@@ -129,5 +150,55 @@
   &__submit-send:hover,
   &__submit-send:focus {
     fill: $color-blue;
+  }
+}
+
+
+// TABLET
+@media screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
+  .footer__bg {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .newsletter__item {
+    flex-direction: column;
+    margin: 0;
+    gap: 10px;
+  }
+  .newsletter__mail {
+    width: 450px;
+  }
+}
+
+// DESCOP
+@media screen and (min-width: $deskopStart) {
+  .footer__bg {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    flex-direction: row;
+    text-align: left;
+    
+  }
+  .footer__list{
+    margin: 20px 0;
+    text-align: left;
+  }
+  .footer__social{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-bottom: 0px;
+  }
+  .newsletter{
+    margin-top: 10px;
+  margin-left: auto;
+  }
+  .newsletter__title{
+    text-align: left;
+  }
+  .newsletter__item{
+flex-direction: row;
   }
 }

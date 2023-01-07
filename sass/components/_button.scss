@@ -11,7 +11,7 @@
   background-position: center;
 
   &__content {
-    @include mixin-main($color-white, 900, 44px, 1.36, 0.06em);
+    @include mixin-main($color-white, 700, 26px, 1.62, 0.06em);
     padding-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -38,3 +38,9 @@
     color: $color-blue;
   }
 }
+
+// DESKOP
+@media screen and (min-width: $deskopStart) {
+  .bg__content{
+@include mixin-main($color-white, 900, 44px, 1.36, 0.06em);
+}}

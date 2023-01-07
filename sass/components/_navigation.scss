@@ -36,3 +36,10 @@
     }
   }
 }
+
+// TABLET
+@media screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
+  .nav {
+    margin-left: 93px;
+  }
+}

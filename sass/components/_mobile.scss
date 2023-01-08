@@ -101,14 +101,16 @@
   }
   &__social {
     display: flex;
-    margin-bottom: 8px;
-    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    gap: 5px;
   }
   &__social-list {
-    padding-right: 10px;
+    padding-right: 5px;
     border-right: 1px solid $background-two;
     &:last-child {
       border: none;
+      padding-right: 0
     }
   }
   &__social-link {

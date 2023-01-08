@@ -2,13 +2,14 @@
 @use '../utils/globals' as *;
 
 .bg {
-  padding: 200px 0;
+  min-height: 400px;
   background-color: $background-graphite;
   background-image: linear-gradient($background-shadow-four, $background-shadow-four),
     url(../images/background/background.jpg);
-  background-size: 1600px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
 
   &__content {
     @include mixin-main($color-white, 700, 26px, 1.62, 0.06em);
@@ -58,6 +59,10 @@
 
 // DESKOP
 @media screen and (min-width: $deskopStart) {
+  .bg {
+    height: 600px;
+    background-size: 1600px;
+  }
   .bg__content {
     @include mixin-main($color-white, 900, 44px, 1.36, 0.06em);
   }

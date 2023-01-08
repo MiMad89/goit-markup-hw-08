@@ -27,7 +27,8 @@
   left: 50%;
   padding: 40px;
   transform: translate(-50%, -50%);
-  width: 528px;
+  width: calc(100vw - 30px);
+  max-width: 528px;
   min-height: 581px;
   background-color: $color-white;
   box-shadow: 0px 1px 3px $background-shadow-twelve, 0px 1px 1px $background-shadow-fourteen,
@@ -124,8 +125,8 @@
     padding-bottom: 30px;
   }
   &__check {
-    width: 16px;
-    height: 15px;
+    min-width: 16px;
+    min-height: 15px;
     position: relative;
     border: 1px solid;
     border-radius: 2px;
@@ -149,7 +150,8 @@
     }
   }
   &__statute {
-    @include mixin-main($color-black, 400, 14px, 1.71, 0.03em);
+    @include mixin-main($color-black, 400, 12px, 1.16, 0.03em);
+    text-align: center;
   }
   &__statute &__link {
     text-decoration: underline;
@@ -173,5 +175,13 @@
   &__button-send:focus {
     background-color: $color-white;
     color: $color-blue;
+  }
+}
+
+
+// DESCOP
+@media screen and (min-width: $deskopStart) {
+  .modal__statute{
+    @include mixin-main($color-black, 400, 14px, 1.71, 0.03em);
   }
 }

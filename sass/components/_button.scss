@@ -39,8 +39,26 @@
   }
 }
 
+// RESPONSIVE IMAGE
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .bg {
+    background-image: linear-gradient($background-shadow-four, $background-shadow-four),
+      url(../images/background/background@2x.jpg);
+    // background-size: cover;
+  }
+}
+
+@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .bg {
+    background-image: linear-gradient($background-shadow-four, $background-shadow-four),
+      url(../images/background/background@3x.jpg);
+    // background-size: cover;
+  }
+}
+
 // DESKOP
 @media screen and (min-width: $deskopStart) {
-  .bg__content{
-@include mixin-main($color-white, 900, 44px, 1.36, 0.06em);
-}}
+  .bg__content {
+    @include mixin-main($color-white, 900, 44px, 1.36, 0.06em);
+  }
+}

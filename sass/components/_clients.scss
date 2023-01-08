@@ -10,9 +10,12 @@
     text-align: center;
   }
   &__list {
-    @include mixin-display(flex, space-between, center, wrap);
+    @include mixin-display(flex, center, center, wrap);
+    
+    gap: 30px;
   }
   &__item {
+    flex-basis: calc((100% - 30px) / 2);
     cursor: pointer;
     padding: 16px 32px;
     border: 1px solid $background-icon;
@@ -29,5 +32,23 @@
   }
   &__icon {
     fill: currentColor;
+  }
+}
+
+// TABLET
+@media screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
+  .clients__item {
+    flex-basis: calc((100% - 40px) / 3);
+  }
+}
+
+// DESKOP
+@media screen and (min-width: $deskopStart) {
+  .clients__list {
+    @include mixin-display(flex, space-between, center, wrap);
+    gap: 0;
+  }
+  .clients__item {
+    flex-basis: auto;
   }
 }

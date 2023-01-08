@@ -2,7 +2,7 @@
 @use '../utils/globals' as *;
 
 .column {
-  padding: 94px 0;
+  padding: 60px 0;
   &__list {
     @include mixin-display(flex, space-between, center, wrap);
     gap: 30px;
@@ -36,10 +36,13 @@
 
 // DESKOP
 @media screen and (min-width: $deskopStart) {
-  .column__item{
+  .column{
+    padding: 94px 0;
+  }
+  .column__item {
     flex-basis: calc((100% - 90px) / 4);
   }
-  .column__name{
+  .column__name {
     @include mixin-main($color-black, 700, 14px, 1.14, 0.03em);
     text-align: left;
   }

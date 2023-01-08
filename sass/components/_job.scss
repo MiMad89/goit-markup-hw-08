@@ -2,6 +2,7 @@
 @use '../utils/globals' as *;
 
 .job {
+  display: none;
   &__list {
    @include mixin-display(flex, space-between, center, wrap);
     padding-bottom: 94px;
@@ -30,3 +31,11 @@
     margin: 27px 0;
   }
 }
+
+// DESKOP
+@media screen and (min-width: $deskopStart) {
+  .job {
+    display: block;
+  }
+}
+// @include mixin-display(flex, space-between, center, wrap);

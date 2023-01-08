@@ -3,14 +3,15 @@
 
 .team {
   background-color: $background-beige;
-  padding: 94px 0;
+  padding: 60px 0;
   &__title{
     @include mixin-main($color-black, 700, 36px, 1.166, 0.03em);
   padding-bottom: 50px;
   text-align: center;
   }
   &__list {
-    @include mixin-display(flex, space-between, center, wrap);
+    @include mixin-display(flex, center, center, wrap);
+    gap: 30px;
   }
   &__mane {
     @include mixin-main($color-black, 500, 16px, 1.19, 0.03em);
@@ -49,5 +50,26 @@
       fill: $color-white;
       background-color: $background-blue;
     }
+  }
+}
+
+// TABLET
+@media screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
+ .team__list {
+    @include mixin-display(flex, center, center, wrap);
+    
+  }
+  .team__item{
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+// DESKOP
+@media screen and (min-width: $deskopStart) {
+  .team{
+    padding: 94px 0;
+  }
+  .team__list {
+    @include mixin-display(flex, space-between, center, nowrap);
   }
 }

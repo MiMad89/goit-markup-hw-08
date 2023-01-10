@@ -38,7 +38,8 @@
 // TABLET
 @media screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
   .clients__item {
-    flex-basis: calc((100% - 40px) / 3);
+    @include mixin-display(flex, center, center, wrap);
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 

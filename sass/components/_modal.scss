@@ -10,9 +10,6 @@
   background-color: $background-shadow-two;
   transition: visibility 500ms, opacity 500ms;
 }
-// .is-hidden .modal {
-//   transform: translate(-50%, -100%) rotatex(90deg);
-// }
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -27,7 +24,7 @@
   left: 50%;
   padding: 40px;
   transform: translate(-50%, -50%);
-  width: calc(100vw - 30px);
+  width: calc(100vw - 20px);
   max-width: 528px;
   min-height: 581px;
   background-color: $color-white;
@@ -64,7 +61,7 @@
     position: relative;
     margin-bottom: 10px;
     outline: none;
-
+    width: 100%;
     &:hover,
     &:focus-within {
       fill: $background-blue;
@@ -178,10 +175,9 @@
   }
 }
 
-
 // DESCOP
 @media screen and (min-width: $deskopStart) {
-  .modal__statute{
+  .modal__statute {
     @include mixin-main($color-black, 400, 14px, 1.71, 0.03em);
   }
 }
